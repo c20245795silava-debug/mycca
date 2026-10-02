@@ -5,61 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 
-<body>
-    <h1 class="text-3xl text-red-700 font-bold underline">
+<body class="text-center bg-olive-300">
+    <h1 class="text-3xl md:text-5xl font-bold underline text-red-700 mt-6
+           max-[600px]:text-[100px] max-[600px]:text-red-500">
         Mycca Silava
     </h1>
-    <button id="switch">Switch</button>
-    <header>
-        <nav>
-            <span>@myc</span>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+
+    <button id="switch" class="bg-black text-white
+           px-6 py-3 rounded-5px mt-5 border-0 transition-all 
+           duration-1000 hover:bg-emerald-200 hover:text-black">Switch
+    </button>
+
+
+    <header class="mt-6 px-6">
+        <nav class="flex justify-between items-center mx-[50px] max-[600px]:flex-col max-[600px]:gap-[15px]">
+
+            <span>
+                @myc
+            </span>
+
+            <ul class="flex gap-5 p-0 m-0 list-none
+                   max-[600px]:flex-col
+                   max-[600px]:text-center">
+
+                <li>
+                    <a href="#projects" class="transition-colors duration-500
+                           hover:text-pink-500">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#services" class="transition-colors duration-500
+                           hover:text-pink-500">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="transition-colors duration-500
+                           hover:text-pink-500">
+                        Contact Me
+                    </a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
-    <main>
-        <section id="projects">
-            <h2 class="projects">My Projects</h2>
-            <p>Personal portfolio, payroll system, company website, startup website, and compliance monitoring system.
+
+    <main class="flex flex-wrap gap-[30px] p-[50px] m-[50px]
+             max-[600px]:p-[15px]
+             max-[600px]:m-[10px]
+             max-[600px]:gap-5">
+
+
+        <section id="projects"
+            class="flex-1 min-w-[280px]
+               border-2 border-black p-5 bg-cyan-300 max-[600px]:min-w-0 max-[600px]:flex-[1_1_100%] max-[600px]:p-[15px]">
+
+            <h2 class="text-4xl text-black-500 font-bold
+                   max-[768px]:text-[48px]
+                   max-[768px]:text-blue-500">My Projects</h2>
+
+            <p>
+                Personal portfolio, payroll system, company website,
+                startup website, and compliance monitoring system.
             </p>
+
         </section>
 
-        <section id="services">
-            <h2 class="services">My Services</h2>
-            <p>Website Creation, System Creation, AI Automation, Database Management, Project Management, Systems
-                Analyst</p>
+
+        <section id="services" class="flex-1 min-w-[280px]
+               border-2 border-black p-5
+               bg-olive-400 max-[600px]:min-w-0
+               max-[600px]:flex-[1_1_100%]
+               max-[600px]:p-[15px]">
+
+            <h2 class="text-4xl text-black-500 font-bold
+                   max-[768px]:text-[48px]
+                   max-[768px]:text-blue-500">My Services</h2>
+
+            <p class="text-white">
+                Website Creation, System Creation, AI Automation,
+                Database Management, Project Management, Systems Analyst.
+            </p>
+
         </section>
 
-        <section id="contact">
-            <h2 class="contact">Let's build together!</h2>
-            <form action="#">
-                <!-- Name -->
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <section id="contact" class="flex-1 min-w-[280px]
+               border-2 border-black
+               p-5 bg-white max-[600px]:min-w-0
+               max-[600px]:flex-[1_1_100%]
+               max-[600px]:p-[15px]">
 
-                <!-- Email -->
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+            <h2 class="text-4xl text-pink-500 font-bold
+                   max-[768px]:text-[48px]
+                   max-[768px]:text-blue-500">Let's build together!</h2>
+
+            <form action="#" class="flex flex-col gap-5 text-left">
+
+                <label for="name" class="font-semibold">
+                    Name</label>
+
+                <input type="text" id="name" name="name" required class="border border-gray-400
+                       rounded-lg
+                       px-4 py-3
+                       focus:outline-none
+                       focus:ring-2
+                       focus:ring-pink-400">
+
+                <label for="email" class="font-semibold">
+                    Email</label>
+
+                <input type="email" name="email" id="email" required class="border border-gray-400
+                       rounded-lg
+                       px-4 py-3
+                       focus:outline-none
+                       focus:ring-2 focus:ring-pink-400">
 
                 <!-- Message -->
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
+                <label for="message" class="font-semibold">
+                    Message
+                </label>
 
-                <!-- Submit -->
-                <button type="submit">Send Message</button>
+                <textarea name="message" id="message" rows="5" required class="border border-gray-400
+                       rounded-lg px-4 py-3
+                       resize-none
+                       focus:outline-none
+                       focus:ring-2
+                       focus:ring-pink-400"></textarea>
+
+                <button type="submit" class="bg-black text-white px-6 py-3 border-0
+                       rounded-[10px] transition-all duration-1000 hover:bg-emerald-300 hover:text-black">Send
+                    Message</button>
+
             </form>
+
         </section>
+
     </main>
 
-    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
